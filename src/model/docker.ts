@@ -89,7 +89,7 @@ class Docker {
     const { workspace, actionFolder, unitySerial, gitPrivateToken, dockerWorkspacePath } = parameters;
 
     return `docker run \
-            --workdir c:${dockerWorkspacePath} \
+            --workdir ${dockerWorkspacePath} \
             --rm \
             ${ImageEnvironmentFactory.getEnvVarString(parameters)} \
             --env UNITY_SERIAL="${unitySerial}" \

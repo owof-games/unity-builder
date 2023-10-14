@@ -20,7 +20,7 @@ async function runMain() {
     const baseImage = new ImageTag(buildParameters);
 
     if (buildParameters.providerStrategy === 'local') {
-      core.info('Building locallyyy');
+      core.info('Building locally');
       await PlatformSetup.setup(buildParameters, actionFolder);
       if (process.platform === 'darwin') {
         MacBuilder.run(actionFolder);
