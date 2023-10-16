@@ -90,7 +90,6 @@ class Docker {
 
     return `docker run \
             --workdir ${dockerWorkspacePath} \
-            --network host \
             --rm \
             ${ImageEnvironmentFactory.getEnvVarString(parameters)} \
             --env UNITY_SERIAL="${unitySerial}" \
